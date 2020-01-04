@@ -14,8 +14,8 @@ import (
 	"fmt"
 	"io"
 
-	"filippo.io/age/internal/format"
-	"filippo.io/age/internal/stream"
+	"github.com/schollz/age/format"
+	"github.com/schollz/age/stream"
 )
 
 type Identity interface {

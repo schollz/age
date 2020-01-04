@@ -17,7 +17,7 @@ import (
 	"io"
 	"math/big"
 
-	"filippo.io/age/internal/format"
+	"github.com/schollz/age/format"
 	"golang.org/x/crypto/chacha20poly1305"
 	"golang.org/x/crypto/curve25519"
 	"golang.org/x/crypto/hkdf"
@@ -184,7 +184,7 @@ func ed25519PublicKeyToCurve25519(pk ed25519.PublicKey) []byte {
 	//
 	//     u = (1 + y) / (1 - y)
 	//
-	// See https://blog.filippo.io/using-ed25519-keys-for-encryption.
+	// See https://blog.github.com/schollz/age/using-ed25519-keys-for-encryption.
 	y := new(big.Int).SetBytes(bigEndianY)
 	denom := big.NewInt(1)
 	denom.ModInverse(denom.Sub(denom, y), curve25519P) // 1 / (1 - y)

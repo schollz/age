@@ -12,7 +12,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"filippo.io/age/internal/format"
+	"github.com/schollz/age/format"
 	"golang.org/x/crypto/chacha20poly1305"
 	"golang.org/x/crypto/scrypt"
 )

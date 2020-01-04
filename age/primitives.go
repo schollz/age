@@ -11,7 +11,7 @@ import (
 	"crypto/sha256"
 	"io"
 
-	"filippo.io/age/internal/format"
+	"github.com/schollz/age/format"
 	"golang.org/x/crypto/chacha20poly1305"
 	"golang.org/x/crypto/hkdf"
 )
@@ -25,7 +25,7 @@ func aeadEncrypt(key, plaintext []byte) ([]byte, error) {
 	// spec guarantees each key is only used once (by deriving it from values
 	// that include fresh randomness), allowing us to save the overhead.
 	// For the code that encrypts the actual payload, look at the
-	// filippo.io/age/internal/stream package.
+	// github.com/schollz/age/stream package.
 	nonce := make([]byte, chacha20poly1305.NonceSize)
 	return aead.Seal(nil, nonce, plaintext, nil), nil
 }

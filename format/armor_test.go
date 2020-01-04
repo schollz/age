@@ -12,7 +12,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"filippo.io/age/internal/format"
+	"github.com/schollz/age/format"
 )
 
 func TestArmor(t *testing.T) {
